@@ -271,11 +271,14 @@ GH_CLIENT_ID = get_from_env('GH_CLIENT_ID', '')
 GH_CLIENT_SECRET = get_from_env('GH_CLIENT_SECRET', '')
 
 # email server
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = get_from_env('EMAIL_HOST', 'localhost')
 EMAIL_PORT = int(get_from_env('EMAIL_PORT', "2525"))
 EMAIL_HOST_USER = get_from_env('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = get_from_env('EMAIL_HOST_PASSWORD', '')
 EMAIL_USE_TLS = (get_from_env('EMAIL_USE_TLS', '0') == '1')
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 # to use AWS Simple Email Service
 # in which case environment should contain
