@@ -13,6 +13,6 @@ Helios is an end-to-end verifiable voting system.
     `docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 8080:15672 rabbitmq:3-management`
 
 2. Set up .env file
-    - Take note that if the rabbitmq and postgres are outside of docker instance, instead of localhost it should be the ipaddress of the device or where is the rabbitmq and postgres installed
+    - Please note that if RabbitMQ and PostgreSQL are outside of the Docker instance, the connection should be established using the IP address of the device or the location where RabbitMQ and PostgreSQL are installed, instead of using 'localhost'.
 
 3. `docker compose up -d`
