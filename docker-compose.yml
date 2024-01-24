@@ -1,0 +1,14 @@
+services:
+  helios_server:
+    container_name: helios_server_app
+    build:
+      context: .
+    ports:
+      - '8000:8000'
+
+  celery:
+    container_name: helios_celery
+    restart: always
+    build:
+      context: .
+      dockerfile: celery.Dockerfile
